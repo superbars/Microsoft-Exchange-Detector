@@ -1,0 +1,23 @@
+id: Detect-MS-Exchagne
+
+info: 
+  name: MS-Exchagne
+  author: Bars
+  description: Checks for MS-Exchagne
+  severity: high
+  tags: microsoft, exchange, owa
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/owa/auth/logon.aspx"
+
+    matchers-condition: or
+    matchers:
+      - type: status
+        part: header
+        status:
+          - 200
+      - type: word
+        words:
+          - 'Outlook Web App'
