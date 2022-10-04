@@ -4,7 +4,7 @@ info:
   name: MS-Exchagne
   author: Bars
   description: Checks for MS-Exchagne
-  severity: high
+  severity: info
   tags: microsoft, exchange, owa
 
 requests:
